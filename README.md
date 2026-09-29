@@ -32,6 +32,6 @@ just sync
 | Command | Description |
 |---------|-------------|
 | `just` | List all available commands |
-| `just sync` | Install/update dependencies |
+| `just setup` | Install/update dependencies |
 | `just run` | Run the project |
-| `just test` | Run the tests |
+| `just add <library>` | Add a library to the environment |
