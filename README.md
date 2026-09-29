@@ -8,14 +8,17 @@ You don't need to install Python yourself. `uv` downloads the correct version au
 ### Quick start
 #### Linux (Arch)
 `sudo pacman -S uv`
+
 `sudo pacman -S just`
 
 #### Windows
 `winget install --id astral-sh.uv -e`
+
 `winget install --id Casey.Just -e`
 
-#### MacOS
+#### macOS
 `brew install uv`
+
 `brew install just`
 
 
