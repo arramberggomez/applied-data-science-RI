@@ -24,7 +24,7 @@ You don't need to install Python yourself. `uv` downloads the correct version au
 
 Then install the project dependencies and initialize the virtual environment by running:
 ```sh
-just sync
+just setup
 ```
 
 ## Usage
