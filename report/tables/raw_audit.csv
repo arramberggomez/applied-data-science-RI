@@ -1,0 +1,29 @@
+,dtype,pct_missing,n_unique,min,max
+Address,category,0.0,204,,
+CO 1st Max Hour,float32,0.0,24,0.0,23.0
+CO 1st Max Value,float32,0.0,2698,-0.4000000059604645,19.899999618530273
+CO AQI,float32,50.0,107,0.0,201.0
+CO Mean,float32,0.0,34123,-0.4375,7.508333206176758
+CO Units,category,0.0,1,,
+City,category,0.0,144,,
+County,category,0.0,133,,
+County Code,int64,0.0,73,1.0,650.0
+Date Local,datetime64[us],0.0,5996,,
+NO2 1st Max Hour,float32,0.0,24,0.0,23.0
+NO2 1st Max Value,float32,0.0,990,-2.0,267.0
+NO2 AQI,float32,0.0,129,0.0,132.0
+NO2 Mean,float32,0.0,31859,-2.0,139.5416717529297
+NO2 Units,category,0.0,1,,
+O3 1st Max Hour,float32,0.0,24,0.0,23.0
+O3 1st Max Value,float32,0.0,134,0.0,0.14100000262260437
+O3 AQI,float32,0.0,125,0.0,218.0
+O3 Mean,float32,0.0,8196,0.0,0.09508299827575684
+O3 Units,category,0.0,1,,
+SO2 1st Max Hour,float32,0.0,24,0.0,23.0
+SO2 1st Max Value,float32,0.0,921,-2.0,351.0
+SO2 AQI,float32,50.0,140,0.0,200.0
+SO2 Mean,float32,0.0,12736,-2.0,321.625
+SO2 Units,category,0.0,1,,
+Site Num,int64,0.0,110,1.0,9997.0
+State,category,0.0,47,,
+State Code,int64,0.0,47,1.0,80.0

@@ -1,20 +1,44 @@
 [project]
 name = "applied-data-science-ri"
 version = "0.1.0"
-description = "Add your description here"
+description = "US Air Quality: multi-station aggregation and pollution (AQI) forecasting"
 readme = "README.md"
 authors = [
-    { name = "PlanellesAlex", email = "alex.planelles.a@gmail.com" }
+    { name = "PlanellesAlex", email = "alex.planelles.a@gmail.com" },
+    { name = "PereiraCelia", email = "celia.pereira.rguez@gmail.com" },
+    { name = "RambergAugust", email = "" },
+    { name = "VilarasauLaia", email = "" }
 ]
 requires-python = ">=3.14"
 dependencies = [
+    "joblib>=1.6.0",
+    "kagglehub>=1.0.3",
     "matplotlib>=3.11.2",
+    "numpy>=2.5.3",
     "pandas>=3.0.6",
+    "plotly>=7.1.0",
+    "pyarrow>=26.0.1",
+    "scikit-learn>=1.9.1",
+    "seaborn>=0.13.2",
 ]
 
 [project.scripts]
-applied-data-science-ri = "applied_data_science_ri:main"
+applied-data-science-ri = "applied_data_science_ri.__main__:main"
 
 [build-system]
 requires = ["uv_build>=0.12.10,<0.13.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "ruff>=0.17.4",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "NPY", "PD"]
+ignore = []

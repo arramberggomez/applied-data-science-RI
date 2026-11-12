@@ -89,3 +89,27 @@ tempCodeRunnerFile.py
 # PyPI configuration file
 .pypirc
 
+
+# ---------------------------------------------------------------------------
+# Project-specific
+# ---------------------------------------------------------------------------
+# Data and fitted models are reproducible from the pipeline: never commit them
+# (the empty folders are kept with a .gitkeep file)
+data/raw/*
+data/processed/*
+models/*
+!.gitkeep
+
+# LaTeX build artefacts (main.pdf is kept so the final report is in the repo)
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+report/*.fls
+report/*.fdb_latexmk
+report/*.synctex.gz
+report/*.bbl
+report/*.blg
+
+# macOS
+.DS_Store
