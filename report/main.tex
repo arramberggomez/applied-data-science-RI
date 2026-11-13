@@ -159,6 +159,38 @@ about 45 in Tennessee, North Carolina and Kentucky to below 20 in Alaska
 \section{Theoretical Foundations \& Machine Learning Justification}
 % Why each model suits autocorrelated, seasonal, spatially correlated data.
 % Validation strategy (time-ordered split, time-series cross-validation) and metrics.
+The objective of this project is to develop supervised machine learning models capable of forecasting the next day's ozone air quality index (O3 AQI) at individual monitoring stations across the United States. More precisely, given the historical pollution measurements, temporal information and spatial information available up to day (t), the objective is to estimate the O3 AQI at the same station on day (t+1).\\
+
+\noindent
+This can be formulated as a supervised regression problem. Let $s$ denote a monitoring station and $t$ denote a particular calendar day. The target variable can be expressed as:
+\begin{equation}
+    y(s, t+1)=O3AQI(s, t+1)
+\end{equation}
+The input vector contains information available at station $s$ on the day before $t$:
+\begin{equation}
+    X(s,t)=\left[X(s,t)^{\text{temporal }},X(s,t)^{\text{pollutant }}, X(s,t)^{\text{spatial }}\right],
+\end{equation}
+The forecasting problem is therefore defined as:
+\begin{equation}
+    \hat{y}(s, t+1)=f(X(s,t))
+\end{equation}
+where $f$ represents the function learned by the machine learning algorithm and $\hat{y}(s, t+1)$ is the predicted O3 AQI.\\
+
+\noindent
+The model is trained using historical observations for which both the input features and the subsequent day's target value are available. During training, the algorithm attempts to identify patterns that explain the relationship between the observed features and the future O3 AQI.\\
+
+\noindent
+Unlike a conventional regression problem involving independent observations, this dataset has observations that are organised across both time and geographical locations. Measurements collected at the same station on consecutive dats are not necessarily independent, since atmospheric conditions and pollution concentrations tend to evolve continously. Similarly, stations within the same geographical region may experience related environmental conditions.\\
+
+\noindent
+Consequently, the learning problem has spatiotemporal structure. The model must account for temporal persistence, seasonal behaviour and geographical differences, rather than treating each station-day observation as an entirely unrelated sample.\\
+
+\noindent
+It is important to disttinguish between a conventional spatiotemporal model and a regression model incorporating spatiotemporal features. In this project, spatial and temporal dependencies are represented explicitly through engineered predictors, such as historical pollutant values, calendar variables and the mean O3 AQI of other stations in the same state. The algorithms subsequently learn how these predictors relate to the target variable. This is a feature-based spatiotemporal modelling approach rather than a model that explicitly estimates a continuous spatial process.\\
+
+\subsection{Model selection}
+The choice of machine learning algorithms should be motivated by the statistical properties of the underlying data. The exploratory data analysis provides several important observations that influence the selection of appropriate regression methods.
+
 
 \section{Model Implementation \& Performance Evaluation}
 % Baselines vs. advanced models, hyperparameter tuning, validation and test results.
