@@ -189,7 +189,10 @@ Consequently, the learning problem has spatiotemporal structure. The model must 
 It is important to disttinguish between a conventional spatiotemporal model and a regression model incorporating spatiotemporal features. In this project, spatial and temporal dependencies are represented explicitly through engineered predictors, such as historical pollutant values, calendar variables and the mean O3 AQI of other stations in the same state. The algorithms subsequently learn how these predictors relate to the target variable. This is a feature-based spatiotemporal modelling approach rather than a model that explicitly estimates a continuous spatial process.\\
 
 \subsection{Model selection}
-The choice of machine learning algorithms should be motivated by the statistical properties of the underlying data. The exploratory data analysis provides several important observations that influence the selection of appropriate regression methods.
+The choice of machine learning algorithms should be motivated by the statistical properties of the underlying data. The exploratory data analysis provides several important observations that influence the selection of appropriate regression methods.\\
+
+\noindent
+One of the most relevant findings is the strong autocorrelation of O3 AQI over time. The correlation between the current O3 AQI and its value on the previous day is approximately 0.71, decerasing to approximately 0.4 after one week. This indicates that ozone concentrations exhibit temporal persistence: observations from recent days provide substantial information about the following day's pollution level. This finding justifies including lagged variables and rolling averages in the feature set
 
 
 \section{Model Implementation \& Performance Evaluation}
