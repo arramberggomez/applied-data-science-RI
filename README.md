@@ -40,12 +40,13 @@ Download the dataset, extract `pollution_us_2000_2016.csv` from the zip and save
 ### Requirements
 - [uv](https://docs.astral.sh/uv/) manages Python and the dependencies. You don't need to install Python yourself: `uv` downloads the correct version automatically.
 - [just](https://just.systems/) is the command runner.
+- [tectonic](https://tectonic-typesetting.github.io/en-US/) a Latex engine written in Rust.
 
 | OS | Install |
 |----|---------|
-| Linux (Arch) | `sudo pacman -S uv just` |
-| Windows | `winget install --id astral-sh.uv -e` and `winget install --id Casey.Just -e` |
-| macOS | `brew install uv just` |
+| Linux (Arch) | `sudo pacman -S uv just tectonic` |
+| Windows | `winget install --id astral-sh.uv -e` and `winget install --id Casey.Just -e` and `winget install --id TectonicProject.Tectonic -e` |
+| macOS | `brew install uv just tectonic` |
 
 Then install the project dependencies:
 ```sh

@@ -66,4 +66,5 @@ requirements:
 
 # Build the report PDF (needs latexmk and a TeX distribution)
 report:
-  cd report && latexmk -pdf -interaction=nonstopmode main.tex
+  cd report && tectonic main.tex
+  # cd report && latexmk -pdf -interaction=nonstopmode main.tex
